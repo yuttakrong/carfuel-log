@@ -4,6 +4,8 @@ namespace CarFuel.Models {
 
     public class FillUp {
 
+        public int Id { get; set; }
+
         public double? ConsumptionRate {
             get {
 
@@ -18,7 +20,7 @@ namespace CarFuel.Models {
 
         public double Liters { get; set; }
 
-        public FillUp NextFillUp { get; set; }
+        public virtual FillUp NextFillUp { get; set; }
 
         public int Odometer { get; set; }
 

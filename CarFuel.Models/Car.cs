@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarFuel.Models.Facts {
     public class Car {
@@ -7,8 +9,11 @@ namespace CarFuel.Models.Facts {
         public Car() {
             Make = "Make";
             Model = "Model";
-            FillUps = new List<FillUp>();
+            FillUps = new List<FillUp>();//new HashSet<FillUp>(); 
         }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
 
         public double? AverageConsumptionRate {
 
@@ -34,8 +39,15 @@ namespace CarFuel.Models.Facts {
                 return Math.Round((tempOdo / tempLitre), 2);
             }
         }
-        public List<FillUp> FillUps { get; set; }
+
+        public virtual IList<FillUp> FillUps { get; set; }
+
+        [Required]
+        [StringLength(20)]
         public string Make { get; set; }
+
+        [Required]
+        [StringLength(30)]
         public string Model { get; set; }
 
         public FillUp AddFillUp(int odometer, double liters) {
