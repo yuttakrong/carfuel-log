@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -44,6 +45,7 @@ namespace CarFuel.Models.Facts {
 
         [Required]
         [StringLength(20)]
+        [Description("ยี่ห้อรถ Model")]
         public string Make { get; set; }
 
         [Required]
