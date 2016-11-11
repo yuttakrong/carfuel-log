@@ -15,6 +15,7 @@ namespace CarFuel.Web.Controllers {
 
         }
         // GET: Cars
+        [Authorize]
         public ActionResult Index() {
             CreateTestCar();
 
