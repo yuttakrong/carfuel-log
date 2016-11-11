@@ -25,7 +25,7 @@ namespace CarFuel.Services.Facts {
 
                 var repo = new FakeRepository<Car>();
                 var s = new CarService(repo, mock.Object);
-                var c1 = new Car { PlateNo = "999" };
+                var c1 = new Car { PlateNo = "123" };
                 var c2 = new Car { PlateNo = "123" };
 
                 s.Add(c1);
