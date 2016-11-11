@@ -19,9 +19,9 @@ namespace CarFuel.Services {
         }
 
         public override Car Add(Car item) {
-            //if(All().Any(c=>c.Make == item.Make)) {
-            //    throw new Exception("Can't duplicate car's makr.");
-            //}
+            if(All().Any(c=>c.PlateNo == item.PlateNo)) {
+                throw new Exception("Can't duplicate car's makr.");
+            }
             return base.Add(item);
         }
 
