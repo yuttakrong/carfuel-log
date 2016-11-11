@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Should;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,18 @@ namespace CarFuel.Models.Facts {
 
                 Car c = new Facts.Car();
 
-                Assert.Equal("Make", c.Make);
-                Assert.Equal("Model", c.Model);
-                Assert.NotNull(c.FillUps);
-                Assert.Empty(c.FillUps);
+
+                c.Make.ShouldEqual("Make");
+                c.Model.ShouldEqual("Model");
+                c.FillUps.ShouldNotBeNull();
+                c.FillUps.ShouldBeEmpty();
+
+                //การใช้ระหว่าง Should vs Asset
+
+                //Assert.Equal("Make", c.Make);
+                //Assert.Equal("Model", c.Model);
+                //Assert.NotNull(c.FillUps);
+                //Assert.Empty(c.FillUps);
             }
 
         }
