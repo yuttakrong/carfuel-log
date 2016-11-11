@@ -52,6 +52,13 @@ namespace CarFuel.Models.Facts {
         [StringLength(30)]
         public string Model { get; set; }
 
+        [Required]
+        [StringLength(10)]
+        public string PlateNo { get; set; }
+
+        [StringLength(20)]
+        public string Color { get; set; }
+
         public FillUp AddFillUp(int odometer, double liters) {
             //throw new NotImplementedException();
             FillUp f = new FillUp(odometer, liters);

@@ -25,14 +25,16 @@ namespace CarFuel.Web.Controllers {
 
         private void CreateTestCar() {
             Car c = new Car();
+            c.Color = "Black";
+            c.PlateNo = "กค 5425";
 
             c.AddFillUp(odometer: 1000, liters: 40.0);
-            _carService.Add(c);
-            _carService.SaveChanges();
+            //_carService.Add(c);
+            //_carService.SaveChanges();
 
             c.AddFillUp(odometer: 1600, liters: 50.0);
-            _carService.Add(c);
-            _carService.SaveChanges();
+            //_carService.Add(c);
+            //_carService.SaveChanges();
 
             c.AddFillUp(odometer: 2200, liters: 60.0);
 
