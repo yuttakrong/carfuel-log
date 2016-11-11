@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201611110257147_add more car info.Designer.cs">
       <DependentUpon>201611110257147_add more car info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611110500459_add more car info2.cs" />
+    <Compile Include="Migrations\201611110500459_add more car info2.Designer.cs">
+      <DependentUpon>201611110500459_add more car info2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryBase_T.cs" />
@@ -96,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611110257147_add more car info.resx">
       <DependentUpon>201611110257147_add more car info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611110500459_add more car info2.resx">
+      <DependentUpon>201611110500459_add more car info2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

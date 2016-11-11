@@ -26,7 +26,7 @@ namespace CarFuel.Web.Controllers {
         private void CreateTestCar() {
             Car c = new Car();
             c.Color = "Black";
-            c.PlateNo = "กค 5425";
+            c.PlateNo = "กค 5428";
 
             c.AddFillUp(odometer: 1000, liters: 40.0);
             //_carService.Add(c);
